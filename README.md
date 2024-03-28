@@ -1,1 +1,2 @@
-# ZxingExtend
+# 项目介绍
+对zxing二维码扫描的扩展和封装
