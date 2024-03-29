@@ -80,7 +80,7 @@ public class QrImageResultPointView extends FrameLayout {
     }
 
     private void initView() {
-        View view = LayoutInflater.from(getContext()).inflate(R.layout.qr_image_result_point_view, null);
+        View view = LayoutInflater.from(getContext()).inflate(R.layout.qr_image_result_point_view, this);
         tv_cancle = view.findViewById(R.id.tv_cancle);
         fl_container = view.findViewById(R.id.fl_container);
 
