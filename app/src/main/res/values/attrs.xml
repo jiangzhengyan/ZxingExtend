@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="QrImageResultPointView">
+        <attr name="pv_point_color" format="color" />
+        <attr name="pv_point_stroke_color" format="color" />
+        <attr name="pv_point_w_h" format="dimension" />
+        <attr name="pv_point_radius_corner" format="dimension" />
+        <attr name="pv_point_stroke_width" format="dimension" />
+    </declare-styleable>
+</resources>
