@@ -1,9 +1,6 @@
 ##长按识别二维码
 ### **界面效果**
 ![image](https://upload-images.jianshu.io/upload_images/4952852-e558da2ffb6c9fbe.gif)
-![image](https://upload-images.jianshu.io/upload_images/4952852-e558da2ffb6c9fbe.gif?imageMogr2/auto-orient/strip)
-![scanrotate.gif](https://upload-images.jianshu.io/upload_images/4952852-e859fcfd3f41bfc0.gif?imageMogr2/auto-orient/strip)
-![支付.jpg](https://upload-images.jianshu.io/upload_images/4952852-f108de0181a55ee0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ### **特点**
 
