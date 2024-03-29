@@ -34,56 +34,89 @@ public class ZXingUtils {
     public static final Map<DecodeHintType, Object> HINTS = new EnumMap<>(DecodeHintType.class);
 
     static {
-        List<BarcodeFormat> allFormats = new ArrayList<>();
-        allFormats.add(BarcodeFormat.AZTEC);
-        allFormats.add(BarcodeFormat.CODABAR);
-        allFormats.add(BarcodeFormat.CODE_39);
-        allFormats.add(BarcodeFormat.CODE_93);
-        allFormats.add(BarcodeFormat.CODE_128);
-        allFormats.add(BarcodeFormat.DATA_MATRIX);
-        allFormats.add(BarcodeFormat.EAN_8);
-        allFormats.add(BarcodeFormat.EAN_13);
-        allFormats.add(BarcodeFormat.ITF);
-        allFormats.add(BarcodeFormat.MAXICODE);
-        allFormats.add(BarcodeFormat.PDF_417);
-        allFormats.add(BarcodeFormat.QR_CODE);
-        allFormats.add(BarcodeFormat.RSS_14);
-        allFormats.add(BarcodeFormat.RSS_EXPANDED);
-        allFormats.add(BarcodeFormat.UPC_A);
-        allFormats.add(BarcodeFormat.UPC_E);
-        allFormats.add(BarcodeFormat.UPC_EAN_EXTENSION);
+        List<BarcodeFormat> formats = new ArrayList<>();
+        formats.add(BarcodeFormat.AZTEC);
+        formats.add(BarcodeFormat.CODABAR);
+        formats.add(BarcodeFormat.CODE_39);
+        formats.add(BarcodeFormat.CODE_93);
+        formats.add(BarcodeFormat.CODE_128);
+        formats.add(BarcodeFormat.DATA_MATRIX);
+        formats.add(BarcodeFormat.EAN_8);
+        formats.add(BarcodeFormat.EAN_13);
+        formats.add(BarcodeFormat.ITF);
+        formats.add(BarcodeFormat.MAXICODE);
+        formats.add(BarcodeFormat.PDF_417);
+        formats.add(BarcodeFormat.QR_CODE);
+        formats.add(BarcodeFormat.RSS_14);
+        formats.add(BarcodeFormat.RSS_EXPANDED);
+        formats.add(BarcodeFormat.UPC_A);
+        formats.add(BarcodeFormat.UPC_E);
+        formats.add(BarcodeFormat.UPC_EAN_EXTENSION);
 
-        HINTS.put(DecodeHintType.POSSIBLE_FORMATS, allFormats);
+        HINTS.put(DecodeHintType.POSSIBLE_FORMATS, formats);
         HINTS.put(DecodeHintType.CHARACTER_SET, "utf-8");
     }
 
+    /**
+     * 生成二维码
+     * @param content 二维码内容
+     * @return Bitmap
+     */
     public static Bitmap createQRCodeImage(String content) {
         return createQRCodeImage(content, 500, 0, Color.BLACK, Color.WHITE, null, null, null);
     }
-
+    /**
+     * 生成二维码
+     * @param content 二维码内容
+     * @param size 二维码大小
+     * @return Bitmap
+     */
     public static Bitmap createQRCodeImage(String content, int size) {
         return createQRCodeImage(content, size, 0, Color.BLACK, Color.WHITE, null, null, null);
     }
-
+    /**
+     * 生成二维码
+     * @param content 二维码内容
+     * @param size 二维码大小
+     * @param margin 边距
+     * @return Bitmap
+     */
     public static Bitmap createQRCodeImage(String content, int size, int margin) {
         return createQRCodeImage(content, size, margin, Color.BLACK, Color.WHITE, null, null, null);
     }
-
-    public static Bitmap createQRCodeImage(String text, Bitmap logo_bitmap) {
-        return createQRCodeImage(text, 500, 0, Color.BLACK, Color.WHITE, null, logo_bitmap, null);
+    /**
+     * 生成二维码
+     * @param content 二维码内容
+     * @param logo_bitmap logo
+     * @return Bitmap
+     */
+    public static Bitmap createQRCodeImage(String content, Bitmap logo_bitmap) {
+        return createQRCodeImage(content, 500, 0, Color.BLACK, Color.WHITE, null, logo_bitmap, null);
     }
-
-    public static Bitmap createQRCodeImage(String text, int size, Bitmap logo_bitmap) {
-        return createQRCodeImage(text, size, 0, Color.BLACK, Color.WHITE, null, logo_bitmap, null);
-    }
-
-
-    public static Bitmap createQRCodeImage(String text, int size, int margin, Bitmap logo_bitmap) {
-        return createQRCodeImage(text, size, margin, Color.BLACK, Color.WHITE, null, logo_bitmap, null);
+    /**
+     * 生成二维码
+     * @param content 二维码内容
+     * @param size 二维码大小
+     * @param logo_bitmap logo
+     * @return Bitmap
+     */
+    public static Bitmap createQRCodeImage(String content, int size, Bitmap logo_bitmap) {
+        return createQRCodeImage(content, size, 0, Color.BLACK, Color.WHITE, null, logo_bitmap, null);
     }
 
     /**
-     * 生成带logo的二维码，logo默认为二维码的1/5
+     * 生成二维码
+     * @param content 二维码内容
+     * @param size 二维码大小
+     * @return Bitmap
+     */
+    public static Bitmap createQRCodeImage(String content, int size, int margin, Bitmap logo_bitmap) {
+        return createQRCodeImage(content, size, margin, Color.BLACK, Color.WHITE, null, logo_bitmap, null);
+    }
+
+    /**
+     * 生成带logo的二维码，
+     * logo默认为二维码的1/5
      *
      * @param text                   需要生成二维码的内容
      * @param size                   需要生成二维码的大小
@@ -99,7 +132,8 @@ public class ZXingUtils {
     }
 
     /**
-     * 生成带logo的二维码，logo默认为二维码的1/5
+     * 生成带logo的二维码，
+     * logo默认为二维码的1/5
      *
      * @param text                   需要生成二维码的内容
      * @param size                   需要生成二维码的大小
