@@ -2,7 +2,7 @@
 ## 长按识别二维码
 基于下zxing实现的长按二维码识别
 ### **界面效果**
-![image](https://img-blog.csdnimg.cn/direct/3a00671b179143d6b70a50a13cd76349.gif =220x)
+![image](https://img-blog.csdnimg.cn/direct/3a00671b179143d6b70a50a13cd76349.gif)
 
 ### **特点**
 
