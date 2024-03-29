@@ -1,8 +1,6 @@
-
 ##长按识别二维码
-
 ### **界面效果**
-![image](https://upload-images.jianshu.io/upload_images/4952852-e558da2ffb6c9fbe.gif)
+![image](https://img-blog.csdnimg.cn/direct/3a00671b179143d6b70a50a13cd76349.gif)
 
 ### **特点**
 
